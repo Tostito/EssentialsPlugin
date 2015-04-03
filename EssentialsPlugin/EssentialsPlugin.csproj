@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F02801E-F501-4DF7-BBBF-212A65026680}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EssentialsPlugin</RootNamespace>
+    <AssemblyName>Essentials</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyFileVersion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssemblyFileVersion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChatHandlers\AdminConceal\HandleAdminReveal.cs" />
+    <Compile Include="ChatHandlers\AdminConceal\HandleAdminConceal.cs" />
+    <Compile Include="ChatHandlers\AdminDelete\HandleAdminDeleteInactive.cs" />
+    <Compile Include="ChatHandlers\AdminDelete\HandleAdminDeleteCleanup.cs" />
+    <Compile Include="ChatHandlers\AdminDelete\HandleAdminDeleteGrids.cs" />
+    <Compile Include="ChatHandlers\AdminMove\HandleAdminMoveGridTo.cs" />
+    <Compile Include="ChatHandlers\AdminPlayer\HandleAdminPlayerCleanup.cs" />
+    <Compile Include="ChatHandlers\AdminPlayer\HandleAdminPlayer.cs" />
+    <Compile Include="ChatHandlers\AdminPlayer\HandleAdminPlayerListInactive.cs" />
+    <Compile Include="ChatHandlers\AdminPlayer\HandleAdminPlayerListActive.cs" />
+    <Compile Include="ChatHandlers\AdminScan\HandleAdminScanGrids.cs" />
+    <Compile Include="ChatHandlers\AdminScan\HandleAdminScanEntityId.cs" />
+    <Compile Include="ChatHandlers\AdminScan\HandleAdminScanOverlimit.cs" />
+    <Compile Include="ChatHandlers\AdminScan\HandleAdminScanCleanup.cs" />
+    <Compile Include="ChatHandlers\AdminSettings\HandleAdminSettings.cs" />
+    <Compile Include="ChatHandlers\Admin\HandleAdminStatistics.cs" />
+    <Compile Include="ChatHandlers\ChatHandlerBase.cs" />
+    <Compile Include="ChatHandlers\AdminDelete\HandleAdminDeleteNoBeacon.cs" />
+    <Compile Include="ChatHandlers\AdminDelete\HandleAdminDeleteStationsArea.cs" />
+    <Compile Include="ChatHandlers\AdminDelete\HandleAdminDeleteShipsArea.cs" />
+    <Compile Include="ChatHandlers\AdminMove\HandleAdminMovePlayerTo.cs" />
+    <Compile Include="ChatHandlers\AdminMove\HandleAdminMovePlayerPosition.cs" />
+    <Compile Include="ChatHandlers\AdminMove\HandleAdminMoveAreaTowards.cs" />
+    <Compile Include="ChatHandlers\AdminScan\HandleAdminScanAreaTowards.cs" />
+    <Compile Include="ChatHandlers\Dock\HandleAdminUndockAll.cs" />
+    <Compile Include="ChatHandlers\Dock\HandleDockUndock.cs" />
+    <Compile Include="ChatHandlers\Dock\HandleDockDock.cs" />
+    <Compile Include="ChatHandlers\Dock\HandleDockList.cs" />
+    <Compile Include="ChatHandlers\Dock\HandleDockValidate.cs" />
+    <Compile Include="ChatHandlers\Admin\HandleAdminBackup.cs" />
+    <Compile Include="ChatHandlers\Admin\HandleAdminOwnershipChange.cs" />
+    <Compile Include="ChatHandlers\AdminScan\HandleAdminScanInactive.cs" />
+    <Compile Include="ChatHandlers\Admin\HandleAdminRestart.cs" />
+    <Compile Include="ChatHandlers\Admin\HandleAdminMemory.cs" />
+    <Compile Include="ChatHandlers\HandleLastSeen.cs" />
+    <Compile Include="ChatHandlers\Leaderboard\HandleLeaderboardConquest.cs" />
+    <Compile Include="ChatHandlers\Admin\HandleAdminTurrets.cs" />
+    <Compile Include="ChatHandlers\Admin\HandleAdminTest.cs" />
+    <Compile Include="ChatHandlers\Admin\HandleAdminNotify.cs" />
+    <Compile Include="ChatHandlers\AdminDelete\HandleAdminDeleteGridsArea.cs" />
+    <Compile Include="ChatHandlers\AdminScan\HandleAdminScanNoBeacon.cs" />
+    <Compile Include="ChatHandlers\AdminScan\HandleAdminScanAreaAt.cs" />
+    <Compile Include="ChatHandlers\AdminMove\HandleAdminMoveAreaToPosition.cs" />
+    <Compile Include="ChatHandlers\HandleMotd.cs" />
+    <Compile Include="ChatHandlers\Utility\HandleUtilityGridsCompare.cs" />
+    <Compile Include="ChatHandlers\Utility\HandleUtilityGridsRefresh.cs" />
+    <Compile Include="ChatHandlers\Waypoints\HandleWaypointFactionRemove.cs" />
+    <Compile Include="ChatHandlers\Waypoints\HandleWaypointFactionAdd.cs" />
+    <Compile Include="ChatHandlers\Waypoints\HandleWaypointGroupRemove.cs" />
+    <Compile Include="ChatHandlers\Waypoints\HandleWaypointGroupAdd.cs" />
+    <Compile Include="ChatHandlers\Waypoints\HandleWaypointRefresh.cs" />
+    <Compile Include="ChatHandlers\Waypoints\HandleWaypointToggle.cs" />
+    <Compile Include="ChatHandlers\Waypoints\HandleWaypointList.cs" />
+    <Compile Include="ChatHandlers\Waypoints\HandleWaypointRemove.cs" />
+    <Compile Include="ChatHandlers\Waypoints\HandleWaypointAdd.cs" />
+    <Compile Include="ChatHandlers\HandleFactionF.cs" />
+    <Compile Include="ChatHandlers\HandleFaction.cs" />
+    <Compile Include="ChatHandlers\HandlePos.cs" />
+    <Compile Include="ChatHandlers\HandleMsg.cs" />
+    <Compile Include="ChatHandlers\HandleTimeleft.cs" />
+    <Compile Include="ChatHandlers\HandleInfo.cs" />
+    <Compile Include="ChatHandlers\Utility\HandleUtilityGridsList.cs" />
+    <Compile Include="ChatHandlers\Utility\HandleUtilityExportServer.cs" />
+    <Compile Include="ControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlForm.Designer.cs">
+      <DependentUpon>ControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core.cs" />
+    <Compile Include="EntityManagers\BlockManagement.cs" />
+    <Compile Include="EntityManagers\TurretManagement.cs" />
+    <Compile Include="GameModes\Conquest.cs" />
+    <Compile Include="ProcessHandlers\ProcessBlockEnforcement.cs" />
+    <Compile Include="ProcessHandlers\ProcessCleanup.cs" />
+    <Compile Include="ProcessHandlers\ProcessConceal.cs" />
+    <Compile Include="ProcessHandlers\ProcessDockingZone.cs" />
+    <Compile Include="ProcessHandlers\ProcessBlocks.cs" />
+    <Compile Include="ProcessHandlers\ProcessTurrets.cs" />
+    <Compile Include="ProcessHandlers\ProcessConquest.cs" />
+    <Compile Include="ProcessHandlers\ProcessLoginTracking.cs" />
+    <Compile Include="ProcessHandlers\ProcessSpawnShipTracking.cs" />
+    <Compile Include="ProcessHandlers\ProcessWaypoints.cs" />
+    <Compile Include="ProcessHandlers\ProcessProtection.cs" />
+    <Compile Include="Settings\PluginSettings.cs" />
+    <Compile Include="ProcessHandlers\ProcessCommunication.cs" />
+    <Compile Include="ProcessHandlers\ProcessRespawn.cs" />
+    <Compile Include="ProcessHandlers\ProcessNewUserTransport.cs" />
+    <Compile Include="ProcessHandlers\ProcessGreeting.cs" />
+    <Compile Include="ProcessHandlers\ProcessHandlerBase.cs" />
+    <Compile Include="ProcessHandlers\ProcessInfo.cs" />
+    <Compile Include="ProcessHandlers\ProcessBackup.cs" />
+    <Compile Include="ProcessHandlers\ProcessRestart.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SettingsBlockEnforcementItem.cs" />
+    <Compile Include="Settings\SettingsCleanupNotificationItem.cs" />
+    <Compile Include="Settings\SettingsCleanupTriggerItem.cs" />
+    <Compile Include="Settings\SettingsCleanupTimedItem.cs" />
+    <Compile Include="Settings\SettingsGreetingDialogItem.cs" />
+    <Compile Include="Settings\SettingsBackupItem.cs" />
+    <Compile Include="Settings\SettingsInformationItem.cs" />
+    <Compile Include="Settings\SettingsProtectedItem.cs" />
+    <Compile Include="Settings\SettingsRestartItem.cs" />
+    <Compile Include="Settings\SettingsRestartNotificationItem.cs" />
+    <Compile Include="Settings\SettingsServerWaypointItem.cs" />
+    <Compile Include="UtilityClasses\MTObservableCollection.cs" />
+    <Compile Include="UtilityClasses\OrientedBoundingBox.cs" />
+    <Compile Include="UtilityClasses\SerializeableDictionary.cs" />
+    <Compile Include="UtilityClasses\UIEditors.cs" />
+    <Compile Include="Utility\Backup.cs" />
+    <Compile Include="Utility\TimedEntityCleanup.cs" />
+    <Compile Include="Utility\Communication.cs" />
+    <Compile Include="Utility\CubeGrid.cs" />
+    <Compile Include="Utility\DockingZone.cs" />
+    <Compile Include="Utility\Entity.cs" />
+    <Compile Include="EntityManagers\EntityManagement.cs" />
+    <Compile Include="Utility\Faction.cs" />
+    <Compile Include="Utility\MathUtility.cs" />
+    <Compile Include="Utility\Player.cs" />
+    <Compile Include="Utility\Utility.cs" />
+    <Compile Include="Utility\Waypoints.cs" />
+    <Compile Include="Utility\Wrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AssemblyFileVersion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AssemblyFileVersion.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="HavokWrapper, Version=1.0.5420.29471, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Applications\Steam\SteamApps\common\SpaceEngineers\DedicatedServer64\HavokWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandbox.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Applications\Steam\SteamApps\common\SpaceEngineers\DedicatedServer64\Sandbox.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandbox.Common.XmlSerializers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Applications\Steam\SteamApps\common\SpaceEngineers\DedicatedServer64\Sandbox.Common.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandbox.Game, Version=0.1.5424.28268, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Applications\Steam\SteamApps\common\SpaceEngineers\DedicatedServer64\Sandbox.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="SEModAPI, Version=0.2.7.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Applications\Steam\SteamApps\common\SpaceEngineers\DedicatedServer64\SEModAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="SEModAPIExtensions, Version=0.1.7.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Applications\Steam\SteamApps\common\SpaceEngineers\DedicatedServer64\SEModAPIExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SEModAPIInternal, Version=0.2.4.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Applications\Steam\SteamApps\common\SpaceEngineers\DedicatedServer64\SEModAPIInternal.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="VRage.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Applications\Steam\SteamApps\common\SpaceEngineers\DedicatedServer64\VRage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Applications\Steam\SteamApps\common\SpaceEngineers\DedicatedServer64\VRage.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Math, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Applications\Steam\SteamApps\common\SpaceEngineers\DedicatedServer64\VRage.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ControlForm.resx">
+      <DependentUpon>ControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HavokWrapper.dll" />
+    <Content Include="Sandbox.Common.dll" />
+    <Content Include="Sandbox.Common.XmlSerializers.dll" />
+    <Content Include="Sandbox.Game.dll" />
+    <Content Include="SEModAPI.dll" />
+    <Content Include="SEModAPIExtensions.dll" />
+    <Content Include="SEModAPIInternal.dll" />
+    <Content Include="SEServerExtender.exe" />
+    <Content Include="VRage.Common.dll" />
+    <Content Include="VRage.Library.dll" />
+    <Content Include="VRage.Math.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "C:\ProgramData\SpaceEngineersDedicated\survival test\Mods\Essentials\"
+set textTemplatingPath="%25CommonProgramFiles(x86)%25\Microsoft Shared\TextTemplating\$(VisualStudioVersion)\texttransform.exe"
+if %25textTemplatingPath%25=="\Microsoft Shared\TextTemplating\$(VisualStudioVersion)\texttransform.exe" set textTemplatingPath="%25CommonProgramFiles%25\Microsoft Shared\TextTemplating\$(VisualStudioVersion)\texttransform.exe"
+%25textTemplatingPath%25 "$(ProjectDir)AssemblyFileVersion.tt"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
